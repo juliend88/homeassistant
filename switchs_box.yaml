@@ -1,0 +1,9 @@
+  switch:
+    - platform: command_line
+      scan_interval: 3600
+      switches:
+        box_reboot:
+          friendly_name: Box State & Reboot
+          command_on: curl -s -X POST 'http://10.0.0.112/i?k=REBOOT&v=1'
+          command_off: curl -s -X POST 'http://10.0.0.112/i?k=REBOOT&v=1'
+          command_state: curl -s 'http://10.0.0.112/i?k=REBOOT'

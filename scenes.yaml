@@ -1,0 +1,15 @@
+scene:
+  - name: Livingroom normal
+    entities:
+        light.salon: 
+            state: on
+            #transition: 2
+            brightness: 85
+  - name: Livingroom dim
+    entities:
+        light.salon_2: 
+            state: on 
+            #transition: 2
+            brightness: 5
+        light.prise_lampe:
+            state: off    

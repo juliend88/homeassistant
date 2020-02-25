@@ -1,0 +1,155 @@
+automation:
+  - alias: "Media player paused/stopped"
+    trigger:
+      - platform: state
+        entity_id: media_player.kodi
+        from: 'playing'
+    condition:
+      condition: or
+      conditions:
+      - condition: state
+        entity_id: sun.sun
+        state: 'below_horizon'
+      - condition: state
+        entity_id: light.sejour
+        state: 'on'
+    action:
+      - service: scene.turn_on
+        entity_id: scene.livingroom_normal
+
+  - alias: "Media player playing"
+    trigger:
+      - platform: state
+        entity_id: media_player.kodi
+        to: 'playing'
+    condition:
+      condition: or
+      conditions:
+      - condition: state
+        entity_id: sun.sun
+        state: 'below_horizon'
+      - condition: state
+        entity_id: light.sejour
+        state: 'on'
+    action:
+      - service: scene.turn_on
+        entity_id: scene.livingroom_dim
+
+  - alias: Motion Sensor Lights On
+    trigger:
+      - platform: state
+        entity_id: binary_sensor.capteur_salon_motion
+        to: 'on'
+    condition:
+      condition: and
+      conditions:
+      - condition: state
+        entity_id: light.salon
+        state: 'off'
+      - condition: numeric_state
+        entity_id: sensor.capteur_salon_light_level
+        below : 12
+    action:
+      - service: scene.turn_on
+        entity_id: scene.livingroom_normal
+
+  - alias: Motion Sensor Lights Off
+    trigger:
+      - platform: state
+        entity_id: binary_sensor.capteur_salon_motion
+        to: 'off'
+        for:
+          minutes: 1
+    condition:
+      condition: and
+      conditions:
+      - condition: state
+        entity_id: switch.regarder_kodi
+        state: 'off'
+      - condition: state
+        entity_id: switch.regarder_tv_salon
+        state: 'off'
+      - condition: state
+        entity_id: switch.ps4
+        state: 'off'
+      - condition: state
+        entity_id: media_player.salon
+        state: 'off'  
+    action:
+      - service: homeassistant.turn_off
+        entity_id: light.salon
+
+  - alias: Bedroom Lights Off
+    trigger:
+      - platform: state
+        entity_id: light.chambre
+        to: 'on'
+    condition:
+      condition: and
+      conditions:
+      - condition: state
+        entity_id: switch.allumer_videoprojecteur
+        state: 'on'
+      - condition: state
+        entity_id:  media_player.livebox_chambre
+        state: 'on'
+    action:  
+      - service: homeassistant.turn_off
+        entity_id: light.chambre
+  
+
+  - alias: Bouton VideoProjecteur Off Xiaomi
+    trigger:
+      - device_id: 1853c1898bdc4b13bb86d2c3020db1d1
+        domain: deconz
+        platform: device
+        subtype: turn_on
+        type: remote_button_short_press
+    condition:
+      - condition: state
+        entity_id: remote.chambre
+        state: 'on'
+    action:
+      - service: switch.turn_off
+        entity_id: switch.allumer_videoprojecteur
+
+  - alias: Bouton VideoProjecteur On Xiaomi
+    trigger:
+      - device_id: 1853c1898bdc4b13bb86d2c3020db1d1
+        domain: deconz
+        platform: device
+        subtype: turn_on
+        type: remote_button_short_press
+    condition:
+      - condition: state
+        entity_id: remote.chambre
+        state: 'off'
+    action:
+      - entity_id: switch.allumer_videoprojecteur
+        service: switch.turn_on
+       
+  - alias: Bouton VideoProjecteur On Hue
+    trigger:
+      - platform: state       
+        entity_id: sensor.bouton_chambre_jess
+        to: '1_click'
+    condition:
+      - condition: state
+        entity_id: remote.chambre
+        state: 'off'
+    action:
+      - entity_id: switch.allumer_videoprojecteur
+        service: switch.turn_on
+
+  - alias: Bouton VideoProjecteur Off Hue
+    trigger:
+      - platform: state
+        entity_id: sensor.bouton_chambre_jess
+        to: '1_click'
+    condition:
+      - condition: state
+        entity_id: remote.chambre
+        state: 'on'
+    action:
+      - entity_id: switch.allumer_videoprojecteur
+        service: switch.turn_off        

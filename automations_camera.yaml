@@ -1,0 +1,24 @@
+automation:
+  - id: '13372'
+    alias: 'Start motion detection when not at home'
+    trigger:
+      platform: zone
+      event: leave
+      zone: zone.home
+      entity_id: person.ju
+    action:
+      service: switch.turn_on
+      data:
+        entity_id: switch.mycamera_motion_detection
+
+  - id: '13373'
+    alias: 'Stop motion detection when at home'
+    trigger:
+      platform: zone
+      event: enter
+      zone: zone.home
+      entity_id: person.ju
+    action:
+      service: switch.turn_off
+      data:
+        entity_id: switch.mycamera_motion_detection        

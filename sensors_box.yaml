@@ -1,0 +1,11 @@
+  sensor:
+    - platform: command_line
+      name: Fan Grow Box Day
+      command: curl -s 'http://10.0.0.112/i?k=BOX_0_BLOWER_DAY'
+      unit_of_measurement: "%"
+
+    - platform: command_line
+      name: Fan Grow Box Night
+      command: curl -s 'http://10.0.0.112/i?k=BOX_0_BLOWER_NIGHT'
+      unit_of_measurement: "%"
+

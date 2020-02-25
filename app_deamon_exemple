@@ -1,0 +1,20 @@
+class TvPower(hass.Hass):
+
+    def initialize(self):
+        print("listening tv")
+        self.listen_state(self.toggle_tv, "input_boolean.livingroom_mediacenter_status")
+
+    def toggle_tv(self, entity, attribute, old, new, args):
+        print(entity + ': from ' + old + ' to ' + new + ' and ' + attribute)
+        if new == 'on':
+            self.turn_on("switch.switchpow03")
+            time.sleep(1)
+            self.call_service("remote/send_command", entity_id = "remote.livingroom_ircontrol", command = "livingroom_tv_power")
+            time.sleep(5)
+            self.call_service("remote/send_command", entity_id = "remote.livingroom_ircontrol", command = "livingroom_hifi_mmedia")
+
+        if new == 'off':
+            self.call_service("remote/send_command", entity_id = "remote.livingroom_ircontrol", command = "livingroom_tv_power")
+            self.call_service("remote/send_command", entity_id = "remote.livingroom_ircontrol", command = "livingroom_hifi_standby")
+            time.sleep(2)
+            self.turn_off("switch.switchpow03") 

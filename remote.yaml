@@ -1,0 +1,1167 @@
+cards: null
+type: entities
+entities:
+  - switch.regarder_tv_salon
+  - switch.regarder_kodi
+  - switch.ps4
+  - switch.allumer_videoprojecteur
+  - type: 'custom:state-switch'
+    entity: switch.regarder_tv_salon
+    states:
+      'on':
+        type: horizontal-stack
+        cards:
+          - action: service
+            color: 'rgb(223, 255, 97)'
+            color_type: card
+            icon: 'mdi:volume-minus'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: remote.send_command
+              service_data:
+                command: VolumeDown
+                device: 52557057
+                entity_id: remote.salon
+            type: 'custom:button-card'
+          - color: auto
+            color_type: blank-card
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            type: 'custom:button-card'
+          - color: 'rgb(223, 255, 97)'
+            color_type: card
+            icon: 'mdi:volume-plus'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: remote.send_command
+              service_data:
+                command: VolumeUp
+                device: 52557057
+                entity_id: remote.salon
+            type: 'custom:button-card'
+  - type: 'custom:state-switch'
+    entity: switch.regarder_tv_salon
+    states:
+      'on':
+        type: horizontal-stack
+        cards:
+          - color: 'rgb(6, 69, 114)'
+            color_type: card
+            icon: 'mdi:numeric-1-circle'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: remote.send_command
+              service_data:
+                command: 1
+                device: 55092580
+                entity_id: remote.salon
+            type: 'custom:button-card'
+          - color: 'rgb(6, 69, 114)'
+            color_type: card
+            icon: 'mdi:numeric-2-circle'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: remote.send_command
+              service_data:
+                command: 2
+                device: 55092580
+                entity_id: remote.salon
+            type: 'custom:button-card'
+          - color: 'rgb(6, 69, 114)'
+            color_type: card
+            icon: 'mdi:numeric-3-circle'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: remote.send_command
+              service_data:
+                command: 3
+                device: 55092580
+                entity_id: remote.salon
+            type: 'custom:button-card'
+  - type: 'custom:state-switch'
+    entity: switch.regarder_tv_salon
+    states:
+      'on':
+        type: horizontal-stack
+        cards:
+          - color: 'rgb(6, 69, 114)'
+            color_type: card
+            icon: 'mdi:numeric-4-circle'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: remote.send_command
+              service_data:
+                command: 4
+                device: 55092580
+                entity_id: remote.salon
+            type: 'custom:button-card'
+          - color: 'rgb(6, 69, 114)'
+            color_type: card
+            icon: 'mdi:numeric-5-circle'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: remote.send_command
+              service_data:
+                command: 5
+                device: 55092580
+                entity_id: remote.salon
+            type: 'custom:button-card'
+          - color: 'rgb(6, 69, 114)'
+            color_type: card
+            icon: 'mdi:numeric-6-circle'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: remote.send_command
+              service_data:
+                command: 6
+                device: 55092580
+                entity_id: remote.salon
+            type: 'custom:button-card'
+  - type: 'custom:state-switch'
+    entity: switch.regarder_tv_salon
+    states:
+      'on':
+        type: horizontal-stack
+        cards:
+          - color: 'rgb(6, 69, 114)'
+            color_type: card
+            icon: 'mdi:numeric-7-circle'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: remote.send_command
+              service_data:
+                command: 7
+                device: 55092580
+                entity_id: remote.salon
+            type: 'custom:button-card'
+          - color: 'rgb(6, 69, 114)'
+            color_type: card
+            icon: 'mdi:numeric-8-circle'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: remote.send_command
+              service_data:
+                command: 8
+                device: 55092580
+                entity_id: remote.salon
+            type: 'custom:button-card'
+          - color: 'rgb(6, 69, 114)'
+            color_type: card
+            icon: 'mdi:numeric-9-circle'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: remote.send_command
+              service_data:
+                command: 9
+                device: 55092580
+                entity_id: remote.salon
+            type: 'custom:button-card'
+  - type: 'custom:state-switch'
+    entity: switch.regarder_tv_salon
+    states:
+      'on':
+        type: horizontal-stack
+        cards:
+          - color: auto
+            color_type: card
+            icon: 'mdi:skip-previous'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: remote.send_command
+              service_data:
+                command: ChannelDown
+                device: 55092580
+                entity_id: remote.salon
+            type: 'custom:button-card'
+          - color: auto
+            color_type: card
+            icon: 'mdi:arrow-up-bold'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: remote.send_command
+              service_data:
+                command: DirectionUp
+                device: 55092580
+                entity_id: remote.salon
+            type: 'custom:button-card'
+          - color: auto
+            color_type: card
+            icon: 'mdi:skip-next'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: remote.send_command
+              service_data:
+                command: ChannelUp
+                device: 55092580
+                entity_id: remote.salon
+            type: 'custom:button-card'
+  - type: 'custom:state-switch'
+    entity: switch.regarder_tv_salon
+    states:
+      'on':
+        type: horizontal-stack
+        cards:
+          - color: auto
+            color_type: card
+            icon: 'mdi:arrow-left-bold'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: remote.send_command
+              service_data:
+                command: DirectionLeft
+                device: 55092580
+                entity_id: remote.salon
+            type: 'custom:button-card'
+          - color: 'rgb(212, 69, 90)'
+            color_type: card
+            icon: 'mdi:circle'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: remote.send_command
+              service_data:
+                command: Select
+                device: 55092580
+                entity_id: remote.salon
+            type: 'custom:button-card'
+          - color: auto
+            color_type: card
+            icon: 'mdi:arrow-right-bold'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: remote.send_command
+              service_data:
+                command: DirectionRight
+                device: 55092580
+                entity_id: remote.salon
+            type: 'custom:button-card'
+  - type: 'custom:state-switch'
+    entity: switch.regarder_tv_salon
+    states:
+      'on':
+        type: horizontal-stack
+        cards:
+          - color: auto
+            color_type: card
+            icon: 'mdi:dots-horizontal-circle-outline'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: remote.send_command
+              service_data:
+                command: Menu
+                device: 55092580
+                entity_id: remote.salon
+            type: 'custom:button-card'
+          - color: auto
+            color_type: card
+            icon: 'mdi:arrow-down-bold'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: remote.send_command
+              service_data:
+                command: DirectionDown
+                device: 55092580
+                entity_id: remote.salon
+            type: 'custom:button-card'
+          - color: auto
+            color_type: card
+            icon: 'mdi:backup-restore'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: remote.send_command
+              service_data:
+                command: Return
+                device: 55092580
+                entity_id: remote.salon
+            type: 'custom:button-card'
+  - type: 'custom:state-switch'
+    entity: switch.regarder_kodi
+    states:
+      'on':
+        type: horizontal-stack
+        cards:
+          - color: 'rgb(64, 136, 254)'
+            color_type: card
+            icon: 'mdi:menu'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: kodi.call_method
+              service_data:
+                entity_id: media_player.kodi
+                method: Input.ContextMenu
+            template: remote_button_round
+            type: 'custom:button-card'
+          - color: 'rgb(64, 136, 254)'
+            color_type: card
+            hold_action:
+              action: call-service
+              service: kodi.call_method
+              service_data:
+                entity_id: media_player.kodi
+                method: Input.Up
+                repeat: 100
+            icon: 'mdi:arrow-up-bold-circle'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: kodi.call_method
+              service_data:
+                entity_id: media_player.kodi
+                method: Input.Up
+            template: remote_button_round
+            type: 'custom:button-card'
+          - color: 'rgb(64, 136, 254)'
+            color_type: card
+            hold_action:
+              action: call-service
+              service: kodi.call_method
+              service_data:
+                action: pageup
+                entity_id: media_player.kodi
+                method: Input.ExecuteAction
+                repeat: 100
+            icon: 'mdi:chevron-double-up'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: kodi.call_method
+              service_data:
+                action: pageup
+                entity_id: media_player.kodi
+                method: Input.ExecuteAction
+            template: remote_button_round
+            type: 'custom:button-card'
+  - type: 'custom:state-switch'
+    entity: switch.regarder_kodi
+    states:
+      'on':
+        type: horizontal-stack
+        cards:
+          - color: 'rgb(64, 136, 254)'
+            color_type: card
+            icon: 'mdi:arrow-left-bold-circle'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: kodi.call_method
+              service_data:
+                entity_id: media_player.kodi
+                method: Input.Left
+            template: remote_button_round
+            type: 'custom:button-card'
+          - color: 'rgb(64, 136, 254)'
+            color_type: card
+            icon: 'mdi:check-circle-outline'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: kodi.call_method
+              service_data:
+                entity_id: media_player.kodi
+                method: Input.Select
+            template: remote_button_round
+            type: 'custom:button-card'
+          - color: 'rgb(64, 136, 254)'
+            color_type: card
+            icon: 'mdi:arrow-right-bold-circle'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: kodi.call_method
+              service_data:
+                entity_id: media_player.kodi
+                method: Input.Right
+            template: remote_button_round
+            type: 'custom:button-card'
+  - type: 'custom:state-switch'
+    entity: switch.regarder_kodi
+    states:
+      'on':
+        type: horizontal-stack
+        cards:
+          - color: 'rgb(64, 136, 254)'
+            color_type: card
+            icon: 'mdi:backburger'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: kodi.call_method
+              service_data:
+                entity_id: media_player.kodi
+                method: Input.Back
+            template: remote_button_round
+            type: 'custom:button-card'
+          - color: 'rgb(64, 136, 254)'
+            color_type: card
+            hold_action:
+              action: call-service
+              repeat: 100
+              service: kodi.call_method
+              service_data:
+                entity_id: media_player.kodi
+                method: Input.Down
+            icon: 'mdi:arrow-down-bold-circle'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: kodi.call_method
+              service_data:
+                entity_id: media_player.kodi
+                method: Input.Down
+            template: remote_button_round
+            type: 'custom:button-card'
+          - color: 'rgb(64, 136, 254)'
+            color_type: card
+            hold_action:
+              action: call-service
+              repeat: 100
+              service: kodi.call_method
+              service_data:
+                action: pagedown
+                entity_id: media_player.kodi
+                method: Input.ExecuteAction
+            icon: 'mdi:chevron-double-down'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: kodi.call_method
+              service_data:
+                action: pagedown
+                entity_id: media_player.kodi
+                method: Input.ExecuteAction
+            template: remote_button_round
+            type: 'custom:button-card'
+  - type: 'custom:state-switch'
+    entity: switch.regarder_kodi
+    states:
+      'on':
+        type: horizontal-stack
+        cards:
+          - color: 'rgb(64, 136, 254)'
+            color_type: card
+            icon: 'mdi:chevron-double-left'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: kodi.call_method
+              service_data:
+                action: stepback
+                entity_id: media_player.kodi
+                method: Input.ExecuteAction
+            template: remote_button_round
+            type: 'custom:button-card'
+          - color: 'rgb(64, 136, 254)'
+            color_type: card
+            icon: 'mdi:pause'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: kodi.call_method
+              service_data:
+                action: playpause
+                entity_id: media_player.kodi
+                method: Input.ExecuteAction
+            template: remote_button_round
+            type: 'custom:button-card'
+          - color: 'rgb(64, 136, 254)'
+            color_type: card
+            icon: 'mdi:chevron-double-right'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: kodi.call_method
+              service_data:
+                action: stepforward
+                entity_id: media_player.kodi
+                method: Input.ExecuteAction
+            template: remote_button_round
+            type: 'custom:button-card'
+  - type: 'custom:state-switch'
+    entity: switch.regarder_kodi
+    states:
+      'on':
+        type: horizontal-stack
+        cards:
+          - color: 'rgb(64, 136, 254)'
+            color_type: card
+            icon: 'mdi:home'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: kodi.call_method
+              service_data:
+                entity_id: media_player.kodi
+                method: Input.Home
+            template: remote_button_round
+            type: 'custom:button-card'
+          - color: 'rgb(64, 136, 254)'
+            color_type: card
+            icon: 'mdi:stop'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: kodi.call_method
+              service_data:
+                action: stop
+                entity_id: media_player.kodi
+                method: Input.ExecuteAction
+            template: remote_button_round
+            type: 'custom:button-card'
+          - color: 'rgb(64, 136, 254)'
+            color_type: card
+            icon: 'mdi:information-outline'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: kodi.call_method
+              service_data:
+                entity_id: media_player.kodi
+                method: Input.Info
+            template: remote_button_round
+            type: 'custom:button-card'
+  - type: 'custom:state-switch'
+    entity: switch.regarder_kodi
+    states:
+      'on':
+        type: horizontal-stack
+        cards:
+          - color: 'rgb(64, 136, 254)'
+            color_type: card
+            icon: 'mdi:subtitles'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: kodi.call_method
+              service_data:
+                enable: true
+                entity_id: media_player.kodi
+                method: Player.SetSubtitle
+                playerid: 1
+                subtitle: next
+            template: remote_button_round
+            type: 'custom:button-card'
+          - color: auto
+            color_type: card
+            icon: 'mdi:arrow-up-bold'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: remote.send_command
+              service_data:
+                command: DirectionUp
+                device: 52560538
+                entity_id: remote.salon
+            template: remote_button_round
+            type: 'custom:button-card'
+          - color: 'rgb(64, 136, 254)'
+            color_type: card
+            icon: 'mdi:backup-restore'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: kodi.call_method
+              service_data:
+                method: VideoLibrary.Scan
+            template: remote_button_round
+            type: 'custom:button-card'
+  - type: 'custom:state-switch'
+    entity: switch.regarder_kodi
+    states:
+      'on':
+        type: horizontal-stack
+        cards:
+          - color: auto
+            color_type: card
+            icon: 'mdi:arrow-left-bold'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: remote.send_command
+              service_data:
+                command: DirectionLeft
+                device: 52560538
+                entity_id: remote.salon
+            type: 'custom:button-card'
+          - color: 'rgb(212, 69, 90)'
+            color_type: card
+            icon: 'mdi:circle'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: remote.send_command
+              service_data:
+                command: Select
+                device: 52560538
+                entity_id: remote.salon
+            type: 'custom:button-card'
+          - color: auto
+            color_type: card
+            icon: 'mdi:arrow-right-bold'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: remote.send_command
+              service_data:
+                command: DirectionRight
+                device: 52560538
+                entity_id: remote.salon
+            type: 'custom:button-card'
+  - type: 'custom:state-switch'
+    entity: switch.regarder_kodi
+    states:
+      'on':
+        type: horizontal-stack
+        cards:
+          - color: auto
+            color_type: card
+            icon: 'mdi:dots-horizontal-circle-outline'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: remote.send_command
+              service_data:
+                command: Menu
+                device: 52560538
+                entity_id: remote.salon
+            type: 'custom:button-card'
+          - color: auto
+            color_type: card
+            icon: 'mdi:arrow-down-bold'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: remote.send_command
+              service_data:
+                command: DirectionDown
+                device: 52560538
+                entity_id: remote.salon
+            type: 'custom:button-card'
+          - color: auto
+            color_type: card
+            icon: 'mdi:backup-restore'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: remote.send_command
+              service_data:
+                command: Return
+                device: 52560538
+                entity_id: remote.salon
+            type: 'custom:button-card'
+  - type: 'custom:state-switch'
+    entity: switch.allumer_videoprojecteur
+    states:
+      'on':
+        type: horizontal-stack
+        cards:
+          - action: service
+            color: 'rgb(223, 255, 97)'
+            color_type: card
+            icon: 'mdi:volume-minus'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: remote.send_command
+              service_data:
+                command: VolumeDown
+                device: 52557057
+                entity_id: remote.chambre
+            type: 'custom:button-card'
+          - color: 'rgb(64, 136, 254)'
+            color_type: card
+            entity: switch.allumer_videoprojecteur
+            icon: 'mdi:television'
+            show_name: false
+            state:
+              - styles:
+                  label:
+                    - color: red
+                value: 'on'
+              - styles:
+                  label:
+                    - color: green
+                value: 'off'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            type: 'custom:button-card'
+          - color: 'rgb(223, 255, 97)'
+            color_type: card
+            icon: 'mdi:volume-plus'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: remote.send_command
+              service_data:
+                command: VolumeUp
+                device: 52557057
+                entity_id: remote.chambre
+            type: 'custom:button-card'
+  - type: 'custom:state-switch'
+    entity: switch.allumer_videoprojecteur
+    states:
+      'on':
+        type: horizontal-stack
+        cards:
+          - color: 'rgb(6, 69, 114)'
+            color_type: card
+            icon: 'mdi:numeric-1-circle'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: remote.send_command
+              service_data:
+                command: 1
+                device: 67204115
+                entity_id: remote.chambre
+            type: 'custom:button-card'
+          - color: 'rgb(6, 69, 114)'
+            color_type: card
+            icon: 'mdi:numeric-2-circle'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: remote.send_command
+              service_data:
+                command: 2
+                device: 67204115
+                entity_id: remote.chambre
+            type: 'custom:button-card'
+          - color: 'rgb(6, 69, 114)'
+            color_type: card
+            icon: 'mdi:numeric-3-circle'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: remote.send_command
+              service_data:
+                command: 3
+                device: 67204115
+                entity_id: remote.chambre
+            type: 'custom:button-card'
+  - type: 'custom:state-switch'
+    entity: switch.allumer_videoprojecteur
+    states:
+      'on':
+        type: horizontal-stack
+        cards:
+          - color: 'rgb(6, 69, 114)'
+            color_type: card
+            icon: 'mdi:numeric-4-circle'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: remote.send_command
+              service_data:
+                command: 4
+                device: 67204115
+                entity_id: remote.chambre
+            type: 'custom:button-card'
+          - color: 'rgb(6, 69, 114)'
+            color_type: card
+            icon: 'mdi:numeric-5-circle'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: remote.send_command
+              service_data:
+                command: 5
+                device: 67204115
+                entity_id: remote.chambre
+            type: 'custom:button-card'
+          - color: 'rgb(6, 69, 114)'
+            color_type: card
+            icon: 'mdi:numeric-6-circle'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: remote.send_command
+              service_data:
+                command: 6
+                device: 67204115
+                entity_id: remote.chambre
+            type: 'custom:button-card'
+  - type: 'custom:state-switch'
+    entity: switch.allumer_videoprojecteur
+    states:
+      'on':
+        type: horizontal-stack
+        cards:
+          - color: 'rgb(6, 69, 114)'
+            color_type: card
+            icon: 'mdi:numeric-7-circle'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: remote.send_command
+              service_data:
+                command: 7
+                device: 67204115
+                entity_id: remote.chambre
+            type: 'custom:button-card'
+          - color: 'rgb(6, 69, 114)'
+            color_type: card
+            icon: 'mdi:numeric-8-circle'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: remote.send_command
+              service_data:
+                command: 8
+                device: 67204115
+                entity_id: remote.chambre
+            type: 'custom:button-card'
+          - color: 'rgb(6, 69, 114)'
+            color_type: card
+            icon: 'mdi:numeric-9-circle'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: remote.send_command
+              service_data:
+                command: 9
+                device: 67204115
+                entity_id: remote.chambre
+            type: 'custom:button-card'
+  - type: 'custom:state-switch'
+    entity: switch.allumer_videoprojecteur
+    states:
+      'on':
+        type: horizontal-stack
+        cards:
+          - color: auto
+            color_type: card
+            icon: 'mdi:skip-previous'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: remote.send_command
+              service_data:
+                command: ChannelDown
+                device: 67204115
+                entity_id: remote.chambre
+            type: 'custom:button-card'
+          - color: auto
+            color_type: card
+            icon: 'mdi:arrow-up-bold'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: remote.send_command
+              service_data:
+                command: DirectionUp
+                device: 67204115
+                entity_id: remote.chambre
+            type: 'custom:button-card'
+          - color: auto
+            color_type: card
+            icon: 'mdi:skip-next'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: remote.send_command
+              service_data:
+                command: ChannelUp
+                device: 67204115
+                entity_id: remote.chambre
+            type: 'custom:button-card'
+  - type: 'custom:state-switch'
+    entity: switch.allumer_videoprojecteur
+    states:
+      'on':
+        type: horizontal-stack
+        cards:
+          - color: auto
+            color_type: card
+            icon: 'mdi:arrow-left-bold'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: remote.send_command
+              service_data:
+                command: DirectionLeft
+                device: 67204115
+                entity_id: remote.chambre
+            type: 'custom:button-card'
+          - color: 'rgb(212, 69, 90)'
+            color_type: card
+            icon: 'mdi:circle'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: remote.send_command
+              service_data:
+                command: Select
+                device: 67204115
+                entity_id: remote.chambre
+            type: 'custom:button-card'
+          - color: auto
+            color_type: card
+            icon: 'mdi:arrow-right-bold'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: remote.send_command
+              service_data:
+                command: DirectionRight
+                device: 67204115
+                entity_id: remote.chambre
+            type: 'custom:button-card'
+  - type: 'custom:state-switch'
+    entity: switch.allumer_videoprojecteur
+    states:
+      'on':
+        type: horizontal-stack
+        cards:
+          - color: auto
+            color_type: card
+            icon: 'mdi:dots-horizontal-circle-outline'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: remote.send_command
+              service_data:
+                command: Menu
+                device: 67204115
+                entity_id: remote.chambre
+            type: 'custom:button-card'
+          - color: auto
+            color_type: card
+            icon: 'mdi:arrow-down-bold'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: remote.send_command
+              service_data:
+                command: DirectionDown
+                device: 67204115
+                entity_id: remote.chambre
+            type: 'custom:button-card'
+          - color: auto
+            color_type: card
+            icon: 'mdi:backup-restore'
+            styles:
+              card:
+                - font-size: 16px
+                - width: 75px
+            tap_action:
+              action: call-service
+              service: remote.send_command
+              service_data:
+                command: Return
+                device: 67204115
+                entity_id: remote.chambre
+            type: 'custom:button-card'
+

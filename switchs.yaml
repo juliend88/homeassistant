@@ -1,0 +1,83 @@
+switch:
+  - platform: template
+    switches:
+      remote_chambre:
+        friendly_name: 'chambre'
+        value_template: "{{ is_state('remote.chambre', 'on') }}"
+        turn_on:
+          service: remote.turn_on
+        turn_off:
+          service: remote.turn_off            
+      remote_salon:
+        friendly_name: 'TV'
+        value_template: "{{ is_state('remote.salon', 'on') }}"
+        turn_on:
+          service: remote.turn_on
+        turn_off:
+          service: remote.turn_off            
+      regarder_tv_salon:
+        friendly_name: TV Salon
+        value_template: "{{ is_state_attr('remote.salon', 'current_activity', 'Regarder la TV') }}"
+        turn_on:
+          service: remote.turn_on
+          data:
+            entity_id: remote.salon
+            activity: 'Regarder la TV'
+        turn_off:
+          service: remote.turn_on
+          data:
+            entity_id: remote.salon
+            activity: 'PowerOff'
+      regarder_kodi:
+        friendly_name: Kodi
+        value_template: "{{ is_state_attr('remote.salon', 'current_activity', 'Kodi') }}"
+        turn_on:
+          service: remote.turn_on
+          data:
+            entity_id: remote.salon
+            activity: 'Kodi'
+        turn_off:
+          service: remote.turn_on
+          data:
+            entity_id: remote.salon
+            activity: 'PowerOff'
+      ecouter_musique:
+        friendly_name: Chromecast Salon
+        value_template: "{{ is_state_attr('remote.salon', 'current_activity', 'Écouter de la musique') }}"
+        turn_on:
+          service: remote.turn_on
+          data:
+            entity_id: remote.salon
+            activity: 'Écouter de la musique'
+        turn_off:
+          service: remote.turn_on
+          data:
+            entity_id: remote.salon
+            activity: 'PowerOff'
+      ps4:
+        friendly_name: PS4
+        value_template: "{{ is_state_attr('remote.salon', 'current_activity', 'Games') }}"
+        turn_on:
+          service: remote.turn_on
+          data:
+            entity_id: remote.salon
+            activity: 'Games'
+        turn_off:
+          service: remote.turn_on
+          data:
+            entity_id: remote.salon
+            activity: 'PowerOff'
+
+      allumer_videoprojecteur:
+        friendly_name: Projecteur Chambre
+        value_template: "{{ is_state_attr('remote.chambre', 'current_activity', 'Regarder la TV') }}"
+        turn_on:
+          service: remote.turn_on
+          data:
+            entity_id: remote.chambre
+            activity: 'Regarder la TV'
+        turn_off:
+          service: remote.turn_on
+          data:
+            entity_id: remote.chambre
+            activity: 'PowerOff'

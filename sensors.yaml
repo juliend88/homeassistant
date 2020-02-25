@@ -1,0 +1,6 @@
+  sensor:
+    - platform: template
+      sensors:
+        bouton_chambre_jess_last_update:
+          friendly_name: "Update bouton videoprojecteur"
+          value_template: "{{ state_attr('sensor.bouton_chambre_jess','last_updated') }}"

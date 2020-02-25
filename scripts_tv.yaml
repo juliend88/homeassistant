@@ -1,0 +1,125 @@
+script:
+  reciever_volume_up:
+    alias: Volume up
+    sequence:
+        service: remote.send_command
+        data:
+            entity_id: remote.salon
+            command:
+                - VolumeUp
+            device: 52557057
+  reciever_volume_down:
+    alias: Volume down
+    sequence:
+        service: remote.send_command
+        data:
+            entity_id: remote.salon
+            command:
+                - VolumeDown
+            device: 52557057
+
+
+  reciever_1:
+    alias: 1
+    sequence:
+        service: remote.send_command
+        data:
+            entity_id: remote.salon
+            command:
+                - "1"
+            device: 55092580
+
+  reciever_2:
+    alias: 2
+    sequence:
+        service: remote.send_command
+        data:
+            entity_id: remote.salon
+            command:
+                - "2"
+            device: 55092580
+  reciever_3:
+    alias: 3
+    sequence:
+        service: remote.send_command
+        data:
+            entity_id: remote.salon
+            command:
+                - "3"
+            device: 55092580
+  reciever_4:
+    alias: 4
+    sequence:
+        service: remote.send_command
+        data:
+            entity_id: remote.salon
+            command:
+                - "4"
+            device: 55092580
+  reciever_5:
+    alias: 5
+    sequence:
+        service: remote.send_command
+        data:
+            entity_id: remote.salon
+            command:
+                - "5"
+            device: 55092580
+  reciever_6:
+    alias: 6
+    sequence:
+        service: remote.send_command
+        data:
+            entity_id: remote.salon
+            command:
+                - "6"
+            device: 55092580
+  reciever_7:
+    alias: 7
+    sequence:
+        service: remote.send_command
+        data:
+            entity_id: remote.salon
+            command:
+                - "7"
+            device: 55092580
+  reciever_8:
+    alias: 8
+    sequence:
+        service: remote.send_command
+        data:
+            entity_id: remote.salon
+            command:
+                - "8"
+            device: 55092580
+  reciever_9:
+    alias: 9
+    sequence:
+        service: remote.send_command
+        data:
+            entity_id: remote.salon
+            command:
+                - "9"
+            device: 55092580
+  reciever_10:
+    alias: 10
+    sequence:
+        service: remote.send_command
+        data:
+            entity_id: remote.salon
+            command:
+                - "1"
+                - "0"
+            device: 55092580
+  reciever_11:
+    alias: 11
+    sequence:
+        service: remote.send_command
+        data:
+            entity_id: remote.salon
+            command:
+                - "1"
+                - "1"
+            device: 55092580
+            
+

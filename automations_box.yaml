@@ -1,0 +1,78 @@
+  automation:
+    - alias: "Box Fan Automation"
+      trigger:
+        - platform: state
+          entity_id: sensor.box_temp
+          to: '30'
+      condition:
+        - condition: time
+          after: '11:00:00'
+          before: '21:00:00'
+          weekday:
+            - mon
+            - tue
+            - wed
+            - thu
+            - fri
+        - condition: state
+          entity_id: switch.box_reboot
+          state: 'on'
+      action:
+        service: shell_command.fan_start
+ 
+    - alias: Fan Control Day
+      id: '1513037592911'
+      trigger:
+        - entity_id: input_number.fan_control_day
+          platform: state
+      action:
+        service: shell_command.fan_curl_day
+
+    - alias: Fan Control Night
+      id: '1513037592912'
+      trigger:
+        - entity_id: input_number.fan_control_night
+          platform: state
+      action:
+        service: shell_command.fan_curl_night
+ 
+    - alias: Change Fan Power for Night
+      trigger:
+        - platform: time
+          at: "21:00:00"
+      action:
+        service: shell_command.fan_curl_power_day_50
+        service: shell_command.fan_curl_power_night_50
+ 
+    - alias: Change Fan Power for Day
+      trigger:
+        - platform: time
+          at: "11:00:00"
+      action:
+        service: shell_command.fan_curl_power_day_100
+        service: shell_command.fan_curl_power_night_100
+ 
+  shell_command:
+    fan_start: curl -s -X POST 'http://10.0.0.112/i?k=BOX_0_BLOWER_DAY&v=100'
+    fan_curl_day: curl -s -X POST 'http://10.0.0.112/i?k=BOX_0_BLOWER_DAY&v={{ states.input_number.fan_control_day.state }}'
+    fan_curl_night: curl -s -X POST 'http://10.0.0.112/i?k=BOX_0_BLOWER_NIGHT&v={{ states.input_number.fan_control_night.state }}'
+    fan_curl_power_day_50: curl -s -X POST 'http://10.0.0.112/i?k=BOX_0_BLOWER_DAY&v=50'
+    fan_curl_power_day_100: curl -s -X POST 'http://10.0.0.112/i?k=BOX_0_BLOWER_DAY&v=100'
+    fan_curl_power_night_50: curl -s -X POST 'http://10.0.0.112/i?k=BOX_0_BLOWER_NIGHT&v=50'
+    fan_curl_power_night_100: curl -s -X POST 'http://10.0.0.112/i?k=BOX_0_BLOWER_NIGHT&v=100'
+
+  input_number:
+    fan_control_day:
+      name: Fan Control Day
+      initial: 50
+      min: 50
+      max: 100
+      step: 1
+ 
+    fan_control_night:
+      name: Fan Control Night
+      initial: 50
+      min: 50
+      max: 100
+      step: 1
+
